@@ -110,11 +110,12 @@ subscriber_5 = Subscriber("BOB")
 publisher.subscribe(subscriber_1, "sports")          # Subscriber 1 subscribes to "sports"
 publisher.subscribe(subscriber_2, "entertainment")   # Subscriber 2 subscribes to "entertainment"
 publisher.subscribe(subscriber_3, "sports")          # Subscriber 3 subscribes to "sports"
-publisher.subscribe(subscriber_4, "sports")
+publisher.subscribe(subscriber_4, "games")
 publisher.subscribe(subscriber_5, "entertainment")
 
 # Publish a message to the "sports" topic
 publisher.publish("Soccer match result", "sports")
 publisher.publish("Knock, Knock.", "entertainment")
+publisher.publish("TETRIS", "games")
 # Call the receive method of subscriber_1 to process the message
 subscriber_1.receive()
