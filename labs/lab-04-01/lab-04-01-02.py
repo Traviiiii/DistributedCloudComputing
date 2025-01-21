@@ -100,16 +100,21 @@ class Subscriber:
 publisher = Publisher()
 
 # Create instances of Subscriber
-subscriber_1 = Subscriber("Subscriber 1")
-subscriber_2 = Subscriber("Subscriber 2")
-subscriber_3 = Subscriber("Subscriber 3")
+subscriber_1 = Subscriber("HANK")
+subscriber_2 = Subscriber("CONNOR")
+subscriber_3 = Subscriber("STEVE")
+subscriber_4 = Subscriber("JOHN")
+subscriber_5 = Subscriber("BOB")
 
 # Subscribe subscribers to different topics
 publisher.subscribe(subscriber_1, "sports")          # Subscriber 1 subscribes to "sports"
 publisher.subscribe(subscriber_2, "entertainment")   # Subscriber 2 subscribes to "entertainment"
 publisher.subscribe(subscriber_3, "sports")          # Subscriber 3 subscribes to "sports"
+publisher.subscribe(subscriber_4, "sports")
+publisher.subscribe(subscriber_5, "entertainment")
 
 # Publish a message to the "sports" topic
 publisher.publish("Soccer match result", "sports")
+publisher.publish("Knock, Knock.", "entertainment")
 # Call the receive method of subscriber_1 to process the message
 subscriber_1.receive()
